@@ -1,0 +1,7 @@
+output_dir: /kaggle/working/sua_net_manuscript_analysis
+n_bootstrap: 2000
+seed: 42
+result_dirs:
+  BUSI: /kaggle/working/sua_net_busi
+  BUSBRA: /kaggle/working/sua_net_busbra
+  BUS-UCLM: /kaggle/working/sua_net_bus_uclm

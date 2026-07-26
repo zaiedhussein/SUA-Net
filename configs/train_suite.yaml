@@ -1,0 +1,5 @@
+output_dir: /kaggle/working/sua_net_ALL
+experiments:
+  BUSI: train/busi.yaml
+  BUSBRA: train/busbra.yaml
+  BUS-UCLM: train/bus_uclm.yaml

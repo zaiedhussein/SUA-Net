@@ -1,0 +1,51 @@
+experiment_name: suanet-busi
+
+dataset:
+  name: BUSI
+  root: /kaggle/input/datasets/joydhar/breast-cancer-ultrasound-dataset/Dataset_BUSI_with_GT
+  split_strategy: stratified_image
+
+model:
+  encoder_name: efficientnet_b0
+  pretrained: true
+  num_classes: 2
+  dropout: 0.4
+  freeze_blocks: 2
+  sva_kernel: 7
+  sva_reduction: 8
+  dla_dilation: 3
+  use_sva: true
+  use_dla: true
+  use_mgp: true
+
+training:
+  img_size: 224
+  batch_size: 16
+  epochs: 40
+  lr: 0.0003
+  weight_decay: 0.0001
+  focal_gamma: 2.0
+  label_smoothing: 0.05
+  grad_clip: 1.0
+  early_stopping: 20
+  accumulation: 2
+  k_folds: 5
+  seed: 42
+  monitor: accuracy
+  monitor_mode: max
+  strong_augmentation: true
+  mixed_precision: true
+  use_tta: false
+  use_mc_dropout: true
+  mc_dropout_samples: 20
+
+runtime:
+  output_dir: /kaggle/working/sua_net_busi
+  device: auto
+  num_workers: 0
+  pin_memory: true
+  deterministic: true
+  save_predictions: true
+
+metadata:
+  protocol_note: Reproduces the original image-wise stratified BUSI protocol.

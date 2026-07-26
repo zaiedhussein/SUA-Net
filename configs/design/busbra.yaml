@@ -1,0 +1,34 @@
+experiment_config: ../train/busbra.yaml
+output_dir: /kaggle/working/sua_net_design_ablation_busbra
+generate_gradcam: false
+overrides:
+  training:
+    monitor: accuracy
+    monitor_mode: max
+    use_tta: false
+    use_mc_dropout: false
+variants:
+  - name: Full setting
+    model: {}
+  - name: SVA kernel k=3
+    model: {sva_kernel: 3}
+  - name: SVA kernel k=9
+    model: {sva_kernel: 9}
+  - name: DLA dilation d=1
+    model: {dla_dilation: 1}
+  - name: SVA channel only
+    model: {sva_attention_mode: channel_only}
+  - name: SVA spatial only
+    model: {sva_attention_mode: spatial_only}
+  - name: Channel-preserving variance
+    model: {sva_variance_mode: channel_preserving}
+  - name: MGP avg
+    model: {mgp_statistics: [avg]}
+  - name: MGP avg+max
+    model: {mgp_statistics: [avg, max]}
+  - name: MGP avg+std
+    model: {mgp_statistics: [avg, std]}
+  - name: MGP avg+max+std+skew
+    model: {mgp_statistics: [avg, max, std, skew]}
+  - name: Fully unfrozen backbone
+    model: {freeze_blocks: 0}

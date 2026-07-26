@@ -1,0 +1,26 @@
+mode: configured
+experiment_config: ../train/busi.yaml
+output_dir: /kaggle/working/sua_net_backbone_busi
+variants:
+  - name: EfficientNet-B0
+    overrides: {model: {encoder_name: efficientnet_b0}}
+  - name: MobileNetV3-Large
+    overrides: {model: {encoder_name: mobilenetv3_large_100}}
+  - name: DenseNet-121
+    overrides: {model: {encoder_name: densenet121}}
+  - name: EfficientNet-B1
+    overrides: {model: {encoder_name: efficientnet_b1}}
+  - name: MobileNetV3-Small
+    overrides: {model: {encoder_name: mobilenetv3_small_100}}
+  - name: ResNet-18
+    overrides: {model: {encoder_name: resnet18}}
+  - name: ResNet-34
+    overrides: {model: {encoder_name: resnet34}}
+  - name: Small Mamba
+    overrides: {model: {encoder_name: mambaout_small}}
+  - name: ViT-Tiny
+    overrides: {model: {encoder_name: vit_tiny_patch16_224}}
+  - name: ConvNeXt-T
+    overrides: {model: {encoder_name: convnext_tiny}}
+  - name: Swin-Tiny
+    overrides: {model: {encoder_name: swin_tiny_patch4_window7_224}}

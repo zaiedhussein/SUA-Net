@@ -1,0 +1,17 @@
+experiment_config: train/busi.yaml
+output_dir: /kaggle/working/sua_net_profiling
+measure_runtime: true
+require_cuda: true
+warmup: 50
+iterations: 500
+repetitions: 5
+mc_passes: [10, 20, 30, 50]
+variants:
+  - {name: Backbone only, model: {use_dla: false, use_sva: false, use_mgp: false}}
+  - {name: DLA only, model: {use_dla: true, use_sva: false, use_mgp: false}}
+  - {name: SVA only, model: {use_dla: false, use_sva: true, use_mgp: false}}
+  - {name: MGP only, model: {use_dla: false, use_sva: false, use_mgp: true}}
+  - {name: DLA + SVA, model: {use_dla: true, use_sva: true, use_mgp: false}}
+  - {name: DLA + MGP, model: {use_dla: true, use_sva: false, use_mgp: true}}
+  - {name: SVA + MGP, model: {use_dla: false, use_sva: true, use_mgp: true}}
+  - {name: Full SUA-Net, model: {use_dla: true, use_sva: true, use_mgp: true}}

@@ -1,0 +1,19 @@
+experiment_config: ../train/busbra.yaml
+output_dir: /kaggle/working/sua_net_ablation_busbra
+generate_gradcam: false
+gradcam_samples: 8
+overrides:
+  training:
+    monitor: accuracy
+    monitor_mode: max
+    use_tta: false
+    use_mc_dropout: false
+variants:
+  - {name: Full SUA-Net, use_dla: true, use_sva: true, use_mgp: true}
+  - {name: Without SVA, use_dla: true, use_sva: false, use_mgp: true}
+  - {name: Without DLA, use_dla: false, use_sva: true, use_mgp: true}
+  - {name: Without MGP, use_dla: true, use_sva: true, use_mgp: false}
+  - {name: MGP only, use_dla: false, use_sva: false, use_mgp: true}
+  - {name: DLA only, use_dla: true, use_sva: false, use_mgp: false}
+  - {name: SVA only, use_dla: false, use_sva: true, use_mgp: false}
+  - {name: Backbone only, use_dla: false, use_sva: false, use_mgp: false}

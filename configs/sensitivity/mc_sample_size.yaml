@@ -1,0 +1,11 @@
+mode: mc_sample_size
+output_dir: /kaggle/working/sua_net_mc_sensitivity
+sample_sizes: [10, 20, 30, 50]
+configs:
+  BUSI: ../train/busi.yaml
+  BUSBRA: ../train/busbra.yaml
+  BUS-UCLM: ../train/bus_uclm.yaml
+result_dirs:
+  BUSI: /kaggle/working/sua_net_busi
+  BUSBRA: /kaggle/working/sua_net_busbra
+  BUS-UCLM: /kaggle/working/sua_net_bus_uclm

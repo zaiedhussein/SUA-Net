@@ -1,0 +1,7 @@
+mode: imbalance
+output_dir: /kaggle/working/sua_net_imbalance_sensitivity
+experiments:
+  BUSI: ../train/busi.yaml
+  BUSBRA: ../train/busbra.yaml
+  BUS-UCLM: ../train/bus_uclm.yaml
+strategies: [baseline, weighted_focal, balanced_sampler]

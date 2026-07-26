@@ -1,0 +1,13 @@
+output_dir: /kaggle/working/sua_net_diversity
+encoder_name: efficientnet_b0
+img_size: 224
+batch_size: 16
+num_workers: 0
+device: auto
+seed: 42
+max_pairs: 100000
+n_bootstrap: 2000
+datasets:
+  BUSI: /kaggle/input/datasets/joydhar/breast-cancer-ultrasound-dataset/Dataset_BUSI_with_GT
+  BUSBRA: /kaggle/input/datasets/orvile/bus-bra-a-breast-ultrasound-dataset
+  BUS-UCLM: /kaggle/input/datasets/orvile/bus-uclm-breast-ultrasound-dataset/BUS-UCLM Breast ultrasound lesion segmentation dataset/BUS-UCLM Breast ultrasound lesion segmentation dataset/BUS-UCLM

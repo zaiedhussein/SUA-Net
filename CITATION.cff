@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the associated article and this software release. Add the article DOI after publication."
+title: "Speckle Aware Attention and Multi Scale Pooling for Robust Breast Ultrasound Lesion Classification Across Multiple Benchmarks"
+type: software
+authors:
+  - family-names: Alhaj
+    given-names: Zaied
+version: 1.0.0
+license: MIT
+
+keywords:
+  - breast ultrasound
+  - medical image classification
+  - speckle-aware attention
+  - multi-scale pooling
+  - uncertainty
