@@ -204,6 +204,21 @@ Critical manuscript definitions are enforced by
 `tests/test_manuscript_alignment.py` and `tests/test_protocols.py`; the
 workflow-to-command mapping is contained in this README.
 
+
+## Citation
+
+If you use this repository, implementation, or trained models in your research, please cite:
+
+@article{alhaj2026suanet,
+  author  = {Alhaj, Zaied},
+  title   = {Speckle aware attention and multi scale pooling for robust breast ultrasound lesion classification across multiple benchmarks},
+  journal = {Discover Artificial Intelligence},
+  volume  = {6},
+  pages   = {965},
+  year    = {2026},
+  doi     = {10.1007/s44163-026-02073-7}
+}
+
 ## Release
 
 Large checkpoints belong in a versioned GitHub Release or archival repository,
