@@ -207,7 +207,15 @@ workflow-to-command mapping is contained in this README.
 
 ## Citation
 
-If you use this repository, implementation, or trained models in your research, please cite:
+If you use SUA-Net, this repository, the implementation, or associated
+trained models in your research, please cite the accompanying article:
+
+Alhaj, Z.
+Speckle aware attention and multi scale pooling for robust breast ultrasound lesion classification across multiple benchmarks.
+Discover Artificial Intelligence, 6, 965 (2026).
+https://doi.org/10.1007/s44163-026-02073-7
+
+BibTeX
 
 @article{alhaj2026suanet,
   author  = {Alhaj, Zaied},
@@ -216,7 +224,8 @@ If you use this repository, implementation, or trained models in your research, 
   volume  = {6},
   pages   = {965},
   year    = {2026},
-  doi     = {10.1007/s44163-026-02073-7}
+  doi     = {10.1007/s44163-026-02073-7},
+  url     = {https://doi.org/10.1007/s44163-026-02073-7}
 }
 
 ## Release
